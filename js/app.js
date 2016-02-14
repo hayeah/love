@@ -2,10 +2,12 @@
 //      2016-02-13-08.36
 // init controller
 //var controller = new ScrollMagic.Controller();
+import $ from "jquery";
+
 $(function(){
     var dom = [
         {
-        text:   '<div class="sectionIn">'+ 
+        text:   '<div class="sectionIn">'+
                     '<p>献给我最亲爱的老婆阿紫～<br>' +
                         '情人节快乐！<br>' +
                         '来自你的阿木 / 2016-02-14' +
@@ -19,10 +21,10 @@ $(function(){
     //                '</div>' +
                     '<div class="license">' +
                         '／后面还有哦／' +
-                    '</div>' + 
-                '</div>' 
+                    '</div>' +
+                '</div>'
         }, {
-        text:   '<div class="sectionIn">'+ 
+        text:   '<div class="sectionIn">'+
                     '<h2>特别感谢</h2>' +
                     '<p>木木的React老师<a href="https://github.com/hayeah" class="textu">Howard</a>先森<br>' +
                     'Google doodle／Github！</p>' +
@@ -46,8 +48,8 @@ $(function(){
                      '<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">' +
                          '<button class="jp-play iconPlay" role="button" tabindex="0">play</button>' +
                      '</div>');
-    
-    
+
+
     $("#jquery_jplayer_1").jPlayer({
         ready: function (event) {
             $(this).jPlayer("setMedia", {
@@ -66,7 +68,7 @@ $(function(){
         toggleDuration: true,
         volume: 1
     });
-    
+
 //    var player = new jPlayerPlaylist({
 //        jPlayer: "#player",
 //        cssSelectorAncestor: "#playWindow"
@@ -91,7 +93,7 @@ $(function(){
 ////        },
 //        ready: function() {
 //            $(this).jPlayer("play").jPlayer("repeat");
-//            
+//
 //            /*var $jpDetails = $('.jp-details');
 //            $jpDetails.show();*/
 //        }//,
@@ -99,8 +101,8 @@ $(function(){
 ////            $(this).jPlayer("pauseOthers");
 ////        }
 //    });
-    
-    
+
+
 });
 
 
@@ -113,7 +115,7 @@ window.onload = function() {
     updateSliderControl();
     addSmoothScrolling();
 };
- 
+
 // 使用 onscroll 回调函数来更新 slider
 window.onscroll = function() {
   updateSliderControl();
