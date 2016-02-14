@@ -2,6 +2,110 @@
 //      2016-02-13-08.36
 // init controller
 //var controller = new ScrollMagic.Controller();
+$(function(){
+    var dom = [
+        {
+        text:   '<div class="sectionIn">'+ 
+                    '<p>献给我最亲爱的老婆阿紫～<br>' +
+                        '情人节快乐！<br>' +
+                        '来自你的阿木 / 2016-02-14' +
+                    '</p>' +
+                    '<img src="img/qrcode.gif" width="220" height="220" class="qrcode" /> 扫码或微信长按二维码分享 <br>' +
+    //              '<br>' +
+    //                '<div class="tiny">' +
+    //                    '<a href="https://github.com/superwoods">' +
+    //                    '<img src="img/github.png" width="30%" alt="点击访问超级木木的" /><br>' +
+    //                    '点击访问超级木木的Github </a>' +
+    //                '</div>' +
+                    '<div class="license">' +
+                        '／后面还有哦／' +
+                    '</div>' + 
+                '</div>' 
+        }, {
+        text:   '<div class="sectionIn">'+ 
+                    '<h2>特别感谢</h2>' +
+                    '<p>木木的React老师<a href="https://github.com/hayeah" class="textu">Howard</a>先森<br>' +
+                    'Google doodle／Github！</p>' +
+                    '<div class="btn">' +
+                        '<a href="https://github.com/superwoods">' +
+                        '访问超级木木的Github首页</a>' +
+                    '</div>' +
+                    '<div class="license">' +
+                        '<a href="https://github.com/superwoods">'+
+                            '本页面由 / 超级木木 / 木Studio 设计制作, ' +
+                            '我们使用MIT开源协议, 欢迎转载分享, '+
+                            '但请您务必保留我们的署名, 感谢！'+
+                        '</a>' +
+                    '</div>' +
+                '</div>'
+       }
+    ];
+    $('#section5').html(dom[0].text);
+    $('#section6').html(dom[1].text);
+    $('body').append('<div id="jquery_jplayer_1" class="jp-jplayer"></div>'+
+                     '<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">' +
+                         '<button class="jp-play iconPlay" role="button" tabindex="0">play</button>' +
+                     '</div>');
+    
+    
+    $("#jquery_jplayer_1").jPlayer({
+        ready: function (event) {
+            $(this).jPlayer("setMedia", {
+                mp3: 'media/Shayne-Ward-Until-You.mp3'
+            });
+            $(this).jPlayer("play").jPlayer("repeat");
+        },
+        swfPath: "js",
+        supplied: "m4a, oga, mp3",
+        wmode: "window",
+        useStateClassSkin: true,
+        autoBlur: false,
+        smoothPlayBar: true,
+        keyEnabled: true,
+        remainingDuration: true,
+        toggleDuration: true,
+        volume: 1
+    });
+    
+//    var player = new jPlayerPlaylist({
+//        jPlayer: "#player",
+//        cssSelectorAncestor: "#playWindow"
+//    }, {
+//        mp3: 'media/Shayne-Ward-Until-You.mp3'
+//    }, {
+//        swfPath: "js/",
+//        supplied: "mp3",
+//        errorAlerts:true,
+//        //supplied: "m4v, mp3",
+//        wmode: "window",
+//        useStateClassSkin: true,
+//        autoBlur: true,
+//        smoothPlayBar: true,
+//        keyEnabled: true,
+//        remainingDuration: true,
+//        volume: 1,
+//        //size: {
+////            width: "650px",
+////            height: "380px"//,
+////            //cssClass: "jp-video-360p"
+////        },
+//        ready: function() {
+//            $(this).jPlayer("play").jPlayer("repeat");
+//            
+//            /*var $jpDetails = $('.jp-details');
+//            $jpDetails.show();*/
+//        }//,
+//        //play: function() { // To avoid multiple jPlayers playing together.
+////            $(this).jPlayer("pauseOthers");
+////        }
+//    });
+    
+    
+});
+
+
+
+
 
 // 当页面加载完毕时开始动画。
 window.onload = function() {
@@ -9,7 +113,7 @@ window.onload = function() {
     updateSliderControl();
     addSmoothScrolling();
 };
-
+ 
 // 使用 onscroll 回调函数来更新 slider
 window.onscroll = function() {
   updateSliderControl();
@@ -18,7 +122,7 @@ window.onscroll = function() {
 
 var ani = {
     init: function (){
-        this.logo("#react-logo");
+        this.logo("#hvd");
         this.logo("#ani1");
         this.logo("#ani2");
         this.logo("#ani3");
@@ -96,8 +200,8 @@ function updateSliderControl() {
 
 
         var sectionTop    = section.offsetTop;
-        //var sectionBottom = sectionTop + window.innerHeight;  //  section.offsetHeight
-        var sectionBottom = sectionTop + section.offsetHeight;
+        var sectionBottom = sectionTop + window.innerHeight;  //  section.offsetHeight
+        //var sectionBottom = sectionTop + section.offsetHeight;
         //console.log(section.offsetHeight);
         //console.log(sectionTop + " / " + sectionBottom);
         //console.log(window.scrollY);

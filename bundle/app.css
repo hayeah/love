@@ -471,15 +471,12 @@ h2 {
     font-weight: 100;
 }
 p { font-size: 24px; }
-a {
-    font-weight: 400;
-    color: #FFF;
-}
-a:hover {
-    font-weight: 400;
+a { color: #FFF; text-decoration:none; }
+/*a:hover {
     color: #DADADA;
     text-decoration: none;
-}
+}*/
+.wechat { display: none; }
 .section {
     background-color: rgba(196,1,9,1);
     height: 100%;
@@ -501,27 +498,17 @@ a:hover {
     font-size: 36px;
 }
 /*.flexRow { flex-direction: row; }*/
-.react-logo { /*margin-top:-30px; margin-bottom:40px;*/ }
-.nav {
+.hvd { /*margin-top:-30px; margin-bottom:40px;*/ }
+.sectionIn {
     text-align: center;
     line-height: 32px;
 }
-.nav a { padding: 20px; }
-.iphone-demo {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -webkit-align-self: stretch;
-        -ms-flex-item-align: stretch;
-            align-self: stretch;
-    -webkit-flex-basis: 0;
-        -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+/*.sectionIn a { padding: 20px; }*/
+/*.iphone-demo {
+    flex-grow: 1;
+    align-self: stretch;
+    flex-basis: 0;
+    justify-content: center;
 }
 .iphoneBox {
     width: 300px;
@@ -529,50 +516,45 @@ a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     z-index: 2;
 }
-.iphoneBox img { margin: 89px auto auto 24px; }
-.feature-description {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -webkit-align-self: stretch;
-        -ms-flex-item-align: stretch;
-            align-self: stretch;
-    -webkit-flex-basis: 0;
-        -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-.native {
+.iphoneBox img { margin: 89px auto auto 24px; }*/
+/*.feature-description {
+    flex-grow: 1;
+    align-self: stretch;
+    flex-basis: 0;
+    justify-content: center;
+}*/
+.section1 {
     background-image: url(../img/bg.jpg);
     background-position: center;
     background-size: cover;
 }
 .overlay {
     background-color: transparent;
-    width: 100%;/*background-image: linear-gradient(rgba(0,0,0,0), rgba(118,0,0,1));
+    width: 100%;
+    /*background-image: linear-gradient(rgba(0,0,0,0), rgba(118,0,0,1));
     background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(118,0,0,1) 100%);*/
 }
+/*.overlay .section {
+    background-color: transparent;
+    height:100%;
+}*/
+
+
 .main {
     position: relative;
     z-index: 2;
 }
-.mask {
+/*.mask {
     width: 100%;
     background-color: rgba(31,30,52,1);
     position: absolute;
     z-index: 1;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
 }
 .android-robot {
@@ -580,25 +562,63 @@ a:hover {
     position: absolute;
     bottom: 0;
     right: 0;
-    -webkit-transform: translate(50%, 50%) rotate(-45deg);
-            transform: translate(50%, 50%) rotate(-45deg);
-}
+    transform: translate(50%, 50%) rotate(-45deg);
+}*/
 .slider-control {
     position: fixed;
-    right: 0;
+    right: 2px;
     top: 50%;
-    padding: 0;
     z-index: 9999;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
 }
-.slider-control a { padding: 3px; }
+.slider-control a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
 .slider-control .dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
     border: 1px solid #fff;
-    border-radius: 8px;
 }
 .slider-control .active .dot { background-color: #fff; }
-.qrcode { margin: 0 auto; }
-.tiny { font-size:12px; line-height:12px; }
+
+.qrcode {
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    z-index: 9999;
+}
+.tiny {
+    font-size: 12px;
+    line-height: 12px;
+}
+.license {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top:40px;
+}
+.gif {
+    width:90%; height:auto; }
+.section6 { padding:0 5px; }
+.jp-jplayer { display:none; }
+.jp-audio { position:fixed; top:0; right:0; z-index:99999; }
+.iconPlay { width:20px; height:20px; }
+
+.textu { text-decoration:underline; }
+
+
+
+.btn,
+.btn a {
+    font-size:12px;
+    line-height:14px;
+}
+.btn {}
+
+.section5,
+.section6 { }
+
+.section5 p,
+.section6 p { }

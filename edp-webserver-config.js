@@ -2,11 +2,10 @@
  * @file config edp-webserver
  * @author EFE
  */
-
+ 
 /* globals home, redirect, content, empty, autocss, file, less, stylus, proxyNoneExists */
 
-
-exports.port = 8888; // @St. 2015-12-16-11.23
+exports.port = 8889; // @St. 2016-02-14
 exports.directoryIndexes = true;
 exports.documentRoot = __dirname;
 exports.getLocations = function () {
