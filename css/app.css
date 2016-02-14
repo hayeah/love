@@ -1,0 +1,135 @@
+﻿/* css/app.css */
+@import "../node_modules/normalize.css/normalize.css";
+body,
+div,
+span {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column; /*纵向*/
+    align-items: stretch;
+    flex-shrink: 0;
+    align-content: flex-start;
+    border: 0 solid black;
+    margin: 0;
+    padding: 0;
+}
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: #333333;
+    color: #FFF;
+    font-family: "Pinghei", "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 100;
+}
+h1 {
+    font-size: 60px;
+    font-weight: 100;
+}
+h2 {
+    font-size: 48px;
+    font-weight: 100;
+}
+p { font-size: 24px; }
+a {
+    font-weight: 400;
+    color: #FFF;
+}
+a:hover {
+    font-weight: 400;
+    color: #DADADA;
+    text-decoration: none;
+}
+.section {
+    background-color: rgba(196,1,9,1);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: radial-gradient(ellipse at center, rgba(196,1,9,0) 0%, rgba(118,0,0,1) 100%);
+}
+.bigTile {
+    text-align: center;
+    font-size: 36px;
+}
+/*.flexRow { flex-direction: row; }*/
+.react-logo { /*margin-top:-30px; margin-bottom:40px;*/ }
+.nav {
+    text-align: center;
+    line-height: 32px;
+}
+.nav a { padding: 20px; }
+.iphone-demo {
+    flex-grow: 1;
+    align-self: stretch;
+    flex-basis: 0;
+    justify-content: center;
+}
+.iphoneBox {
+    width: 300px;
+    height: 630px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.iphoneBox img { margin: 89px auto auto 24px; }
+.feature-description {
+    flex-grow: 1;
+    align-self: stretch;
+    flex-basis: 0;
+    justify-content: center;
+}
+.native {
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.overlay {
+    background-color: transparent;
+    width: 100%;/*background-image: linear-gradient(rgba(0,0,0,0), rgba(118,0,0,1));
+    background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(118,0,0,1) 100%);*/
+}
+.main {
+    position: relative;
+    z-index: 2;
+}
+.mask {
+    width: 100%;
+    background-color: rgba(31,30,52,1);
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.android-robot {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%) rotate(-45deg);
+}
+.slider-control {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    padding: 0;
+    z-index: 9999;
+    transform: translate(0, -50%);
+}
+.slider-control a { padding: 3px; }
+.slider-control .dot {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+}
+.slider-control .active .dot { background-color: #fff; }
+.qrcode { margin: 0 auto; }
+.tiny { font-size:12px; line-height:12px; }
