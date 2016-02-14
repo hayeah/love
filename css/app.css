@@ -126,6 +126,7 @@ a {
     right: 2px;
     top: 50%;
     z-index: 9999;
+    -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
 }
 .slider-control a {
@@ -149,35 +150,84 @@ a {
     font-size: 12px;
     line-height: 12px;
 }
-.license {
-    font-size: 12px;
-    line-height: 14px;
-    margin-top: 40px;
-}
 .gif {
     width: 90%;
     height: auto;
+    padding: 6px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.3);
 }
-.section6 { padding: 0 5px; }
 .jp-jplayer { display: none; }
 .jp-audio {
+    width: 26px;
+    height: 26px;
     position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99999;
+    top: 6px;
+    right: 6px;
+    z-index: 99999;/*overflow:hidden;*/
 }
 .iconPlay {
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
+    display: block;
+    overflow: hidden;
+    text-indent: -888px;
+    background-color: transparent;
+    background-image: url(../img/m.svg);
+    background-position: center center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
 }
+.iconPlay:after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10px, 0) rotate(225deg);
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+.jp-state-playing .iconPlay:after { transform: translate(20px, 0) rotate(-225deg); }
 .textu { text-decoration: underline; }
 .btn,
 .btn a {
     font-size: 12px;
     line-height: 14px;
+    font-weight: normal;
 }
-.btn { }
-.section5,
-.section6 { }
+.btn { padding-top: 30px; }
+.btn a {
+    display: block;
+    border-radius: 8px;
+    border: #FFFFFF 1px solid;
+    width: 86px;
+    text-align: left;
+    padding: 10px 10px 10px 100px;
+    margin: 0 auto;
+    background-image: url(../img/github.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 45% auto;
+}
+.license {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+    width: 88%;
+    margin: 40px auto 0 auto;
+}
+/*.section5,
+.section6 { }*/
+.section6 { padding: 0 10px; }
 .section5 p,
-.section6 p { }
+.section6 p {
+    font-size: 20px;
+    font-weight: normal;
+}
